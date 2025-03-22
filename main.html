@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>QR Code Spiderman</title>
+    <title>Alan Morgoev</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #121212;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="rien">
-        <img id="dynamicImage" src="" alt="spiderman" style="display:none;">
-    </div>
-    <div class="afficheM">
-        <img src="https://th.bing.com/th/id/R.302eb18f3477d2b6fd8e1dd71218403c?rik=lBXo9h0iv7bnxw&riu=http%3a%2f%2fsurf-film.com%2fwp-content%2fuploads%2fAffiche_FFS17-01-01.jpg&ehk=%2biHmQUo%2bGw8k1JXFTgOaCVrLXbtyvu%2fEuLB61s6NPS0%3d&risl=&pid=ImgRaw&r=0" alt="affiche">
-    </div>
-
-    <script>
-        // Fonction pour récupérer les paramètres d'URL
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Afficher l'image Spiderman si le paramètre "show" est égal à "spiderman"
-        const imageName = getQueryParam('show');
-        if (imageName === "spiderman") {
-            const imageElement = document.getElementById('dynamicImage');
-            imageElement.src = "https://th.bing.com/th/id/R.b4725ac1d5b511089395f76f1514e3c8?rik=d6gLifEi6v3lXQ&pid=ImgRaw&r=0";
-            imageElement.style.display = "block";
-        }
-    </script>
+    <h1>Ce site a été créé par Alan Morgoev</h1>
 </body>
 </html>
